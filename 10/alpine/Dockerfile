@@ -14,7 +14,7 @@ COPY docker-utils-backup.sh /usr/local/bin/
 RUN ln -s usr/local/bin/docker-entrypoint-ext.sh / \
     && ln -s usr/local/bin/docker-utils-backup.sh /
 
-ENTRYPOINT ["docker-entrypoint-ext.sh"]
+ENTRYPOINT ["/docker-entrypoint-ext.sh"]
 
 VOLUME /backup
 
